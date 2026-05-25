@@ -1,0 +1,12 @@
+/* start directly just like that */
+
+h2{
+    color: chartreuse;
+    text-align: center;
+}
+
+p{
+    color: cornflowerblue;
+    background-color: darkgoldenrod;
+    text-align: center;
+}
