@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            border: 3px solid blueviolet;
+            width: 200px;
+            text-align: center;
+            border-radius: 13px;
+            padding: 15px;
+            margin: 13px;
+            background-color: rgb(167, 0, 0);
+            /* box-shadow: X axis Y axis Spread-Radius color; */
+            box-shadow: 7px 7px 8px rgb(244, 64, 64);
+        }
+
+        .item:hover{
+            box-shadow: 2px 4px 15px rgb(78, 72, 248);      
+            transition: 1s;  
+        }
+
+        .item img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 11px;
+            border: 1px solid aliceblue;
+        }
+
+        .item button{
+            background-color: chocolate;
+            border: none;
+            padding: 5px;
+            border-radius: 13px;
+            color: aliceblue;
+        }
+
+        .item h2{
+            color: aliceblue;
+        }
+
+        .item p{
+            color: aliceblue;
+        }
+
+        body{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="item">
+        <img src="https://images.pexels.com/photos/8555658/pexels-photo-8555658.jpeg">
+        <h2>Black Coffee</h2>
+        <p>Rs 129.00</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="item">
+        <img src="https://images.pexels.com/photos/5847103/pexels-photo-5847103.jpeg">
+        <h2>Chocolate chip cookies</h2>
+        <p>Rs 149.00</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="item">
+        <img src="https://images.pexels.com/photos/32517227/pexels-photo-32517227.jpeg">
+        <h2>Cheesecake</h2>
+        <p>Rs 139.00</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="item">
+        <img src="https://images.pexels.com/photos/18367605/pexels-photo-18367605.jpeg">
+        <h2>Hot Cocoa</h2>
+        <p>Rs 199.00</p>
+        <button>Buy Now</button>
+    </div>
+</body>
+</html>
