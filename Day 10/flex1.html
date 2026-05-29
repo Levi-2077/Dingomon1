@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .item{
+            background-color: aqua;
+            height: 500px;
+            display: flex;
+            /* flex by defult gives row format */
+            /* flex-direction: row/column; */
+            justify-content: center;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .box{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            font-weight: bold;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="item">
+        <div class="box">Cake</div>
+        <div class="box">Cookie</div>
+        <div class="box">Pastry</div>
+    </div>
+</body>
+</html>
