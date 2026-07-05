@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- DOM- helps to connect html with javascript -->
+
+    <p id="myp">Hello good evening</p>
+
+    <button id="btn">Login</button>
+
+    <div class="myc">This is div shopping-0</div>
+    <div class="myc">This is div gaming-1</div>
+
+    <p>Hello good morning</p>
+    <p>Hello good afternoon</p>
+
+    <div class="xyz">amazon-ecommerce</div>
+    <div class="xyz">netflix-ott</div>
+
+    <script>
+        //Element=tag
+        //document=webpage
+
+        //1. id - getElementById("id name")
+        
+        var ele=document.getElementById("myp")
+        console.log(ele)
+
+        const ele1=document.getElementById("btn")
+        console.log(ele1)
+
+
+        //.textcontent-gives content of the tag
+
+        console.log(ele1.textContent)
+
+
+        //2.class- getElementsByClass("class name")
+
+        const ele2=document.getElementsByClassName("myc")
+        console.log(ele2)
+        console.log(ele2[1])
+        console.log(ele2[1].textContent)
+
+
+        //3.tagname- getElementByTagName("tag name")
+
+        const ele3=document.getElementsByTagName("p")
+        console.log(ele3)
+        console.log(ele3[1])
+        console.log(ele3[1].textContent)
+
+
+        //4.queryselector("")- follows the css selector rule
+        //will only select first element/tag
+
+        const ele4= document.querySelector(".xyz")
+        console.log(ele4)
+
+        //5.querySelectAll("")
+
+
+        const ele5= document.querySelectorAll(".xyz")
+        console.log(ele5)
+
+
+
+
+
+
+    </script>
+</body>
+</html>

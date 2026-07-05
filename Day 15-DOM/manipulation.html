@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">hi everyone</p>
+    <button id="btn">Login</button>
+    <div id="mydiv">This is div</div>
+    <p id="newp">this is old para</p>
+    <div id="container">
+        <ul id="mylist"
+
+    </div>
+
+    <script>
+
+        var paragraph=document.getElementById("text")
+
+        paragraph.textContent="hello everyone welcome to DOM magic"
+
+
+        console.log(paragraph)
+
+        const button=document.getElementById("btn")
+        button.textContent="logout"
+
+        //innerhtml- helps to update or change content of tag
+        
+        const div=document.getElementById("mydiv")
+        console.log(div)
+
+        // div.innerHTML="<h1>this is the heading</h1>"
+
+        div.innerHTML=`
+        <p id="myp">hello this is <mark>updated</mark></p>
+        <button>smile</button>
+        <em>happy weekend</em>
+        `
+
+        const ele3=document.getElementById("newp")
+
+        // .style.PropertyName
+
+        ele3.style.color="red"
+        ele3.style.backgroundColor="black"
+        ele3.style.textAlign="center"
+        ele3.textContent="take a break"
+
+
+        //create element(tagname)
+
+        const para=document.createElement("p")
+
+        //add text
+
+        para.innerText="hello dingo mingo"
+
+        document.getElementById("container").appendChild(para)
+
+        const li=document.createElement("li")
+
+        li.innerText="apple"
+
+        document.getElementById("mylist").appendChild(li)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
