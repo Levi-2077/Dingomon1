@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var student1= "Ana"
+        var student2= "Sam"
+        
+        //array [] - multiple data at same time, index starts with 0
+
+        let student=["Naomi", "Monica", "Nick", 123, true]
+        console.log(student)
+
+        console.log(student[2])
+        console.log(student[5])
+        console.log(student[4])
+
+
+        //add data
+
+        student.push("John")
+        student.unshift("Bob")
+
+        //remove data
+
+        student.pop()
+        student.shift()
+
+        //splice
+
+        student.splice(3,0,"Adam")
+        console.log(student)
+
+        //object-collection of data
+
+        var employee={
+            name:"John",
+            email:"john@gmail.com",
+            salary:50000,
+            dept:"IT",
+            loginstatus:true
+        }
+        console.log(employee)
+
+        console.log(employee.dept)
+        console.log(employee.loginstatus)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
