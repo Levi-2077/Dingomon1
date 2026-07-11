@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .piano{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .key{
+            border: 1px solid black;
+            height: 200px;
+            width: 50px;
+            margin: 2px;
+            background-color: white;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .key:active{
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>piano-events</h1>
+    <div class="piano">
+        <div class="key" data-note="C">C</div>
+        <div class="key" data-note="D">D</div>
+        <div class="key" data-note="E">E</div>
+        <div class="key" data-note="F">F</div>
+        <div class="key" data-note="A">A</div>
+        <div class="key" data-note="B">B</div>
+    </div>
+
+    <audio id="audio-C" src="./u_c58whxla22-c-422088.mp3"></audio>
+    <audio id="audio-D" src="./u_c58whxla22-d-piano-d4-422090.mp3"></audio>
+    <audio id="audio-E" src="./u_c58whxla22-e-piano-e4-422092.mp3"></audio>
+    <audio id="audio-F" src="./u_c58whxla22-f-piano-f4-422093.mp3"></audio>
+    <audio id="audio-A" src="./u_c58whxla22-a-piano-a4-422104.mp3"></audio>
+    <audio id="audio-B" src="./u_c58whxla22-b-piano-b4-422106.mp3"></audio>
+
+
+    <script>
+        const key=document.querySelectorAll(".key")
+        console.log(key)
+
+        key.forEach(function(e){
+            const note= e.getAttribute("data-note")
+
+            const audio= document.getElementById("audio-"+note)
+
+            e.addEventListener('click', function(){
+                audio.currentTime=0
+                audio.play()
+            })
+
+        })
+    </script>
+</body>
+</html>

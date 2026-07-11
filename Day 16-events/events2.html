@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            overflow: auto;
+        }
+
+        .content{
+            height: 300px;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>welcome to events</h1>
+
+    <input id="myinput" placeholder="type scanner...">
+    <div id="mydiv">
+        <div class="content">scroll inside me</div>
+    </div>
+
+    <script>
+        const input=document.querySelector("#myinput")
+        const div=document.querySelector("#mydiv")
+
+
+        //mouse over
+        function handleMouseOver(){
+            div.style.backgroundColor='red'
+        }
+
+        div.addEventListener('mouseover', handleMouseOver)
+
+        //mouse out
+        function handleMouseOut(){
+            div.style.backgroundColor='green'
+        }
+
+        div.addEventListener('mouseout', handleMouseOut)
+
+
+        //scroll
+        div.addEventListener('scroll', function(){
+            console.log('scrolled')
+        })
+
+        //keyboard
+        //1. keyup- key released output
+
+        // function handleKeyUp(e){
+        //     console.log('key released' + e.key)
+        // }
+
+        // input.addEventListener('keyup', handleKeyUp)
+
+        // //2. keydown- key released output
+
+        // function handleKeyDown(e){
+        //     console.log('key pressed' + e.key)
+        // }
+
+        // input.addEventListener('keydown', handleKeyDown)
+
+
+        //change- change in value in input
+
+        function handleChange(x){
+            console.log('value in input', x.target.value)
+
+        }
+        input.addEventListener('change', handleChange)
+
+
+
+
+
+    </script>
+</body>
+</html>
