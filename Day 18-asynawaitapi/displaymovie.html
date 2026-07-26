@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .movie{
+            border: 1px solid brown;
+            border-radius: 12px;
+            max-width: 500px;
+            margin: auto;
+            padding: 10px;
+            background-color: aliceblue;
+        }
+
+        .movie:hover{
+            transform: scale(1.03);
+            transition: 2s;
+            box-shadow: 2px 4px 8px black;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Movie Details</h1>
+
+    <input type="text" id="movieinput" placeholder="enter your name">
+
+    <button>Search Movie</button>
+
+    <div class="movie" id="moviecontainer">
+
+    </div>
+
+    <script>
+        function handlesearch(){
+            const moviename = document.getElementById("movieinput").value;
+
+            if(moviename){
+                async function getmovie(moviename) {
+    let url = `https://www.omdbapi.com/?t=${moviename}&apikey=43e48673`;
+
+    try {
+        let response = await fetch(url);
+        let data = await response.json();
+
+        console.log(data);
+
+        if (data.Response === "True") {
+            console.log(`Title: ${data.Title}`);
+            console.log(`Year: ${data.Year}`);
+            console.log(`Plot: ${data.Plot}`);
+            console.log(`Poster: ${data.Poster}`);
+        }else{
+            console.log("movie not found")
+        }
+    } catch (error) {
+        console.log("Error fetching:", error);
+    }
+}
+
+getmovie("hfcnc");
+            }
+        }
+    </script>
+</body>
+</html>
